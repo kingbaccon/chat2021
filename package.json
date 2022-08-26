@@ -21,6 +21,7 @@
     "express": "^4.17.2",
     "mongoose": "^6.1.5",
     "newman": "^5.3.0",
-    "newman-reporter-htmlextra": "^1.22.3"
+    "newman-reporter-htmlextra": "^1.22.3",
+    "yargs": "^17.5.1"
   }
 }
