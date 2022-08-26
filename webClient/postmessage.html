@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/appStyles.css" />
+
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/logger.js"></script>
+    <script src="./scripts/client-Filipczak-plf-solutions.js"></script>
+    <title>Create new Message</title>
+</head>
+
+<body>
+    
+
+    <body>
+        <div class="row">
+            <h1>POST Message</h1>
+          </div>
+
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-sm">
+                    <label class="form-label">Subject</label>
+                    <input type="text" id="subject" class="form-control" />
+                </div>
+                <div class="col-sm">
+                    <label class="form-label">msgText</label>
+                    <input type="text" id="msgText" class="form-control" />
+                </div>
+                <div class="col-sm">
+                    <label class="form-label">Tag</label>
+                    <input type="text" id="tag" class="form-control" />
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="btn-group-vertical">
+                    <button id="btnCreate" type="button" class="btn btn-lg btn-success">
+                       Create
+                    </button>
+                   
+                    <button id="btnCancel" type="button" class="btn btn-lg btn-warning">
+                        Canecl
+                    </button>
+                </div>
+                <button id="btnGoToAllMessaages" type="button" class="btn btn-lg btn-success">
+                    Get all messages
+                 </button>
+    
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label">Text readonly (used for logs)</label>
+                <div id="loggingContainer" class="logBox">
+                    <div><strong></strong></div>
+                    <div id="log"></div>
+                </div>
+            </div>
+        </div>
+    
+    </body>
+</body>
+
+</html>

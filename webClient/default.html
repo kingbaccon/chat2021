@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/appStyles.css" />
+
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/logger.js"></script>
+    <script src="./scripts/client.js"></script>
+    <title>Web-Client - Authenticator</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Web-Client - Authenticator</h1>
+      </div>
+      
+      <div class="row mb-3">
+        <div class="col-sm-4">
+          <label class="form-label">Method</label>
+          <br>
+          <select id="mehthod1" class="form-select">
+            <option value="POST">POST</option>
+            <option value="GET">GET</option>
+            <option value="DELETE">DELETE</option>
+            <option value="PATCH">PATCH</option>
+          </select>
+        </div>
+        <div class="col-sm">
+          <label class="form-label">Endpoint Login</label>
+          <input
+          type="text"
+          id="loginEndpoint"
+          value="/api/auth/login"
+          class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-sm-4">
+          <label class="form-label">Method</label>
+          <select id="mehthod2" class="form-select">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="DELETE">DELETE</option>
+            <option value="PATCH">PATCH</option>
+          </select>
+        </div>
+        <div class="col-sm">
+          <label class="form-label">Endpoint AccessToken</label>
+          <input
+          type="text"
+          id="accessTokenEndpoint"
+          value="/api/auth/accessToken"
+          class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-sm-4">
+          <label class="form-label">Method</label>
+          <select id="mehthod3" class="form-select">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="DELETE">DELETE</option>
+            <option value="PATCH">PATCH</option>
+          </select>
+        </div>
+        <div class="col-sm">
+          <label class="form-label">Authenticated Endpoint</label>
+          <input
+          type="text"
+          id="dataEndpoint"
+          value="/api/messages"
+          class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-sm">
+          <label class="form-label">Username</label>
+          <input
+            type="text"
+            id="username"
+            value="augustinus@von-hippo"
+            class="form-control"
+          />
+        </div>
+
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-sm">
+          <label class="form-label">Password</label>
+          <input
+            type="password"
+            id="password"
+            value="confessiones"
+            class="form-control"
+          />
+        </div>
+
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-sm">
+          <div class="btn-group-vertical">
+            <button id="btn04" type="button" class="btn btn-lg btn-danger">
+              GET /data with wrong login data
+            </button>
+            <button id="btn02" type="button" class="btn btn-lg btn-warning">
+              GET /data with corrupt refresh token
+            </button>
+            <button id="btn03" type="button" class="btn btn-lg btn-warning">
+              GET /data with corrupt access token
+            </button>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="btn-group-vertical">
+            <button id="btn01" type="button" class="btn btn-lg btn-success">
+              GET /data with correct login procedure
+            </button>
+            <button id="btn00" type="button" class="btn btn-lg btn-success">
+              GET /data with correct access token
+            </button>
+            <button id="btn06" type="button" class="btn btn-lg btn-secondary">
+              Clear Tokens
+            </button>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="btn-group-vertical">
+            <button id="btnRPage" type="button" class="btn btn-lg btn-success">
+              Register Page
+            </button>
+            <button id="btnLPage" type="button" class="btn btn-lg btn-success">
+              Login Page
+            </button>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Text readonly (used for logs)</label>
+        <div id="loggingContainer" class="logBox">
+          <div><strong></strong></div>
+          <div id="log"></div>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>

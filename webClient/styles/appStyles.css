@@ -1,0 +1,62 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: monospace;
+}
+
+.full-height {
+  height: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-template-rows: 100px auto;
+  background-color: rgb(180, 185, 189);
+  height: 100%;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0px solid rgba(216, 19, 19, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.commandButton {
+  height: 30px;
+  margin: 5px;
+}
+
+input {
+  font-family: monospace;
+  width: 90%;
+}
+
+.logBox {
+  width: auto;
+  height: 300px;
+  border: 0px solid black;
+  padding: 5px 5px;
+  overflow-y: scroll;
+  overflow-x: auto;
+  font-size: 10px;
+}
+
+.logLabel {
+  color: rgb(114, 121, 114);
+}
+
+.errLabel {
+  color: rgb(209, 26, 26);
+}
+
+.successLabel {
+  color: rgb(18, 189, 75);
+}

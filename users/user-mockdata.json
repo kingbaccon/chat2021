@@ -1,0 +1,92 @@
+[
+    {
+      "_id": "61dbe298bb4599f432112775",
+      "username": "Barbara@chat.app",
+      "password": 12345,
+      "age": 27,
+      "state": "offline",
+      "firstname": "Clemons",
+      "lastname": "Fletcher",
+      "gender": "male"
+    },
+    {
+      "_id": "61dbe298166d7a82e3af88b9",
+      "username": "Myrna@chat.app",
+      "password": 12345,
+      "age": 44,
+      "state": "online",
+      "firstname": "Hull",
+      "lastname": "Hurley",
+      "gender": "male"
+    },
+    {
+      "_id": "61dbe298a80d9cefc0d55550",
+      "username": "Kane@chat.app",
+      "password": 12345,
+      "age": 36,
+      "state": "online",
+      "firstname": "Terry",
+      "lastname": "Cleveland",
+      "gender": "male"
+    },
+    {
+      "_id": "61dbe2981db54a4b0f831cac",
+      "username": "Sadie@chat.app",
+      "password": 12345,
+      "age": 54,
+      "state": "offline",
+      "firstname": "Oneill",
+      "lastname": "Greer",
+      "gender": "male"
+    },
+    {
+      "_id": "61dbe298493915f1639f8c5f",
+      "username": "Leon@chat.app",
+      "password": 12345,
+      "age": 42,
+      "state": "offline",
+      "firstname": "Villarreal",
+      "lastname": "Jacobs",
+      "gender": "male"
+    },
+    {
+      "_id": "61dbe29829b440804e0139d6",
+      "username": "Nunez@chat.app",
+      "password": 12345,
+      "age": 43,
+      "state": "offline",
+      "firstname": "Ferrell",
+      "lastname": "Reeves",
+      "gender": "male"
+    },
+    {
+      "_id": "61dbe298d2bba691cb0007db",
+      "username": "Bridgette@chat.app",
+      "password": 12345,
+      "age": 27,
+      "state": "online",
+      "firstname": "Hayes",
+      "lastname": "Foreman",
+      "gender": "male"
+    },
+    {
+      "_id": "61dbe298d076bc140956ee4b",
+      "username": "Adele@chat.app",
+      "password": 12345,
+      "age": 53,
+      "state": "online",
+      "firstname": "Esperanza",
+      "lastname": "Mendez",
+      "gender": "female"
+    },
+    {
+      "_id": "61dbe298233d7330166a2b92",
+      "username": "Slater@chat.app",
+      "password": 12345,
+      "age": 48,
+      "state": "offline",
+      "firstname": "Keller",
+      "lastname": "Coleman",
+      "gender": "male"
+    }
+  ]

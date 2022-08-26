@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/appStyles.css" />
+
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/logger.js"></script>
+    <script src="./scripts/client-Filipczak-plf-solutions.js"></script>
+    <title>Get all Messages</title>
+  </head>
+  <style>
+    th, td, p, input {
+        font:14px Verdana;
+    }
+    table, th, td 
+    {
+        border: solid 1px #DDD;
+        border-collapse: collapse;
+        padding: 2px 3px;
+        text-align: center;
+    }
+    th {
+        font-weight:bold;
+    }
+</style>
+  <body>
+    <p id="showData"></p>
+
+    <div class="col-sm">
+      <div class="btn-group-vertical">
+          <button id="btnGetAllMessaages" type="button" class="btn btn-lg btn-primary">
+             Get All Messaages
+          </button>
+         
+          <button id="btnGetMyMessaages" type="button" class="btn btn-lg btn-primary">
+              Get My Messaages
+          </button>
+          <button id="btnGetOtherMessages" type="button" class="btn btn-lg btn-primary">
+            Get Other MEssages
+        </button>
+        <br>
+          <input type="text" id="findByThisTag" class="form-control" />
+        <button id="btnfindThisTag" type="button" class="btn btn-lg btn-primary">
+            Filter by this tag
+      </button>
+      </div>
+
+
+    <div class="mb-3">
+      <label class="form-label">Text readonly (used for logs)</label>
+      <div id="loggingContainer" class="logBox">
+          <div><strong></strong></div>
+          <div id="log"></div>
+      </div>
+  </div>
+  </body>
+</html>

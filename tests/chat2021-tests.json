@@ -1,0 +1,647 @@
+{
+	"info": {
+		"_postman_id": "74710c23-33bc-4d7a-825c-53e5ff12872d",
+		"name": "chat2021Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			   "name": "get all messages",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one message",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages/1",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post no body given ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post too many params",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\":\"Learning HTTP\",\r\n    \"tag\":\"wichtig\",\r\n    \"name\":\"is ok\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post no params given",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post first key is wrong",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subjet\":\"Learning HTTP\",\r\n    \"tag\":\"wichtig\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post second key is wrong",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\":\"Learning HTTP\",\r\n    \"ag\":\"wichtig\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post wrong value ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\":\"Learning HTTP\",\r\n    \"tag\":3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post create message",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\":\"Learning HTTP\",\r\n    \"tag\":\"ok\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post create message only with subject",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\":\"Learning HTTP\",\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch change tag",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\":\"Learning HTTP\",\r\n    \"tag\":\"ok\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages/5",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch change only subject",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\":\"tgag\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages/5",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch invalid id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\":\"tgag\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages/1000",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete message",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages/3",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete id invalid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://chatservice.informatik.htl-vil:2604/api/messages/1000",
+					"protocol": "http",
+					"host": [
+						"chatservice",
+						"informatik",
+						"htl-vil"
+					],
+					"port": "2604",
+					"path": [
+						"api",
+						"messages",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

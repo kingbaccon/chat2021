@@ -1,0 +1,26 @@
+{
+  "name": "nvs1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "nodemon": "nodemon server.js",
+    "test": "node server.js tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/htl-villach/informatik/2021-4ahif/nvs-kaa/FILIPCZAK.git"
+  },
+  "author": "afil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/htl-villach/informatik/2021-4ahif/nvs-kaa/FILIPCZAK/issues"
+  },
+  "homepage": "https://gitlab.com/htl-villach/informatik/2021-4ahif/nvs-kaa/FILIPCZAK#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.1.5",
+    "newman": "^5.3.0",
+    "newman-reporter-htmlextra": "^1.22.3"
+  }
+}

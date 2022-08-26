@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/appStyles.css" />
+
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/logger.js"></script>
+    <script src="./scripts/client-Filipczak-plf-solutions.js"></script>
+    <title>Register new User</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="row mb-3">
+                <div class="col-sm">
+                    <label class="form-label">Username</label>
+                    <input type="text" id="username" value="@leks" class="form-control" />
+
+
+                    <label class="form-label">Password</label>
+                    <input type="password" id="password" value="12345" class="form-control" />
+
+
+                    <label class="form-label">age</label>
+                    <input type="number" id="age" value=18 class="form-control" />
+
+                    <label class="form-label">Firstname</label>
+                    <input type="text" id="firstname" value="aleks" class="form-control" />
+
+                    <label class="form-label">lastname</label>
+                    <input type="text" id="lastname" value="Filip" class="form-control" />
+
+                    <label class="form-label">Gender</label>
+                    <br>
+                    <select id="gender" class="form-select">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                      
+                    </select>
+                </div>
+
+            </div>
+            <div class="col-sm">
+                <div class="btn-group-vertical">
+                    <button id="btnRegister" type="button" class="btn btn-lg btn-primary">
+                        Register new User
+                    </button>
+                    <button id="btnCancel" type="button" class="btn btn-lg btn-warning">
+                        Canecl
+                    </button>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="mb-3">
+                <label class="form-label">Text readonly (used for logs)</label>
+                <div id="loggingContainer" class="logBox">
+                    <div><strong></strong></div>
+                    <div id="log"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/appStyles.css" />
+
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/logger.js"></script>
+    <script src="./scripts/client-Filipczak-plf-solutions.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-sm">
+                <label class="form-label">Username</label>
+                <input type="text" id="loginUsername" class="form-control" />
+            </div>
+            <div class="col-sm">
+                <label class="form-label">Password</label>
+                <input type="password" id="loginPassword" class="form-control" />
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="btn-group-vertical">
+                <button id="btnLogin" type="button" class="btn btn-lg btn-success">
+                   Login
+                </button>
+                <button id="btnCancel" type="button" class="btn btn-lg btn-warning">
+                    Canecl
+                </button>
+            </div>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Text readonly (used for logs)</label>
+            <div id="loggingContainer" class="logBox">
+                <div><strong></strong></div>
+                <div id="log"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
