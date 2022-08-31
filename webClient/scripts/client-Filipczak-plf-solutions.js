@@ -221,11 +221,15 @@ function getUserData() {
 
 
 function getMessage() {
-    return {
+    
+    let tags = $('#tag').val().split(',');
+    
+    let message ={
         subject: $('#subject').val(),
         msgText: $('#msgText').val(),
-        tag: $('#tag').val()
+        tag: tags
     };
+    return message;
 }
 
 

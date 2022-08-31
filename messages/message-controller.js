@@ -18,7 +18,9 @@ const controller = {
         filter[key.substring(3)] = {$ne: filter[key]};
         delete filter[key]
       }
-    });
+      if(key.startsWith('tag')) {
+        filter[key] = {$in: filter[key]};
+    }});
     return Message.find(filter)
   },
 
